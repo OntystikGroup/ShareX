@@ -5,11 +5,11 @@ export default function WhatWeDo() {
     <section className="w-full py-12 md:py-24 lg:py-32 bg-background text-white">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
+          <div className="space-y-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary-foreground">
               Что Мы Можем Сделать
             </h2>
-            <p className="max-w-[900px] text-zinc-400 md:text-lg lg:text-xl mt-6">
+            <p className="max-w-[900px] text-zinc-400 md:text-lg lg:text-xl">
               Наша IT-аутсорсинговая компания предлагает широкий спектр услуг, чтобы помочь вам достичь ваших цифровых целей.
             </p>
           </div>
