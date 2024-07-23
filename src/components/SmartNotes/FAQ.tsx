@@ -1,43 +1,5 @@
-"use client"
-import React, { useState } from "react";
-
-interface FAQItemProps {
-  question: string;
-  answer: string;
-}
-
-const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="mt-5">
-      <button
-        className={`flex gap-5 justify-between px-8 py-4 w-full text-xl font-bold leading-7 text-left rounded-lg border border-teal-600 border-solid ${
-          isOpen ? "bg-stone-200 text-zinc-950" : "text-stone-200"
-        } max-md:flex-wrap max-md:px-5`}
-        onClick={() => setIsOpen(!isOpen)}
-        aria-expanded={isOpen}
-      >
-        <span className="my-auto max-md:max-w-full">{question}</span>
-        <img
-          loading="lazy"
-          src={
-            isOpen
-              ? "/arrow_right.svg"
-              : "/arrow.svg"
-          }
-          alt={isOpen ? "Collapse" : "Expand"}
-          className="shrink-0 w-8"
-        />
-      </button>
-      {isOpen && (
-        <div className="p-8 mt-2 text-base leading-6 rounded-lg border border-teal-600 border-solid bg-stone-200 text-zinc-800 max-md:p-5">
-          {answer}
-        </div>
-      )}
-    </div>
-  );
-};
+import React from "react";
+import FAQItem from "./FAQItem";
 
 const FAQ: React.FC = () => {
   const faqItems = [
@@ -70,13 +32,12 @@ const FAQ: React.FC = () => {
 
   return (
     <section id="faq" className="flex justify-center items-center self-stretch px-16 py-20 mt-16 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full">
-      <div className="flex flex-col my-4 max-w-full w-[800px]">
-        <h2 className="text-5xl font-bold text-center bg-clip-text bg-[linear-gradient(234deg,#AAD9D1_0%,#017373_125.68%)] leading-[57.6px] text-stone-200 max-md:max-w-full max-md:text-4xl">
+      <div className="flex flex-col my-4 max-w-full w-full">
+        <h2 className="text-5xl font-bold text-center bg-clip-text bg-[linear-gradient(234deg,#AAD9D1_0%,#017373_125.68%)] leading-[57.6px] text-stone-200 max-md:text-4xl">
           Часто задаваемые вопросы
         </h2>
-        <p className="mt-6 text-base leading-6 text-center text-zinc-400 max-md:max-w-full">
-          Мы собрали список наиболее часто задаваемых вопросов о наших услугах
-          ИТ-аутсорсинга, чтобы помочь вам получить необходимую информацию. Если у вас есть другие вопросы, не стесняйтесь обращаться в нашу службу поддержки.
+        <p className="mt-6 text-base leading-6 text-center text-zinc-400 max-md:text-sm">
+          Мы собрали список наиболее часто задаваемых вопросов о наших услугах ИТ-аутсорсинга, чтобы помочь вам получить необходимую информацию. Если у вас есть другие вопросы, не стесняйтесь обращаться в нашу службу поддержки.
         </p>
         <div className="mt-20 max-md:mt-10">
           {faqItems.map((item, index) => (

@@ -11,24 +11,26 @@ import PricingPlans from "./PricingPlans";
 import FAQ from "./FAQ";
 import CallToAction from "./CallToAction";
 import Footer from "./Footer";
+import WhatWeDo from "./WhatWeDo";
 
 const SmartNotes: React.FC = () => {
   return (
     <div className="flex flex-col items-center bg-zinc-950">
       <Header />
       <Hero />
+      <WhatWeDo />
       {/* <LogoStrip /> */}
-      <Testimonial
+      {/* <Testimonial
         quote="Ваши ИТ-задачи теперь в надежных руках, и вы можете полностью сосредоточиться на развитии бизнеса."
         author="Нұрсұлтан Раушанбеков"
         company="ShareX"
-      />
+      /> */}
       <Features />
-      <Testimonial
+      {/* <Testimonial
         quote="Реальная синхронизация и организация на базе ИИ сделали наш рабочий процесс более эффективным, чем когда-либо."
         author="Шерхан Сәрсен"
         company="ShareX"
-      />
+      /> */}
       {/* <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/be673c46f869808d9c211d328692287e539fc66a5ec2e386a43800f8dabb259c?apiKey=4ba47913d9a146748073b7201a6fb4a1&"
@@ -47,11 +49,11 @@ const SmartNotes: React.FC = () => {
         company="TechSavvy Solutions"
       /> */}
       <FAQ />
-      <Testimonial
+      {/* <Testimonial
         quote="Наши ИТ-задачи теперь в надежных руках благодаря профессиональному аутсорсингу, и мы можем полностью сосредоточиться на развитии бизнеса."
         author="Арман Сәрсембек"
         company="iRocket"
-      />
+      /> */}
 
       <CallToAction />
       <Footer />

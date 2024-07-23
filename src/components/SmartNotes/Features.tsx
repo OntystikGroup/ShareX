@@ -7,7 +7,7 @@ interface FeatureProps {
 }
 
 const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
-  <div className="flex flex-col p-8 rounded-xl border border-teal-600 border-solid shadow-sm max-md:px-5 max-md:mt-6 max-md:max-w-full">
+  <div className="flex flex-col p-8 rounded-xl border border-teal-600 border-solid shadow-sm transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 max-md:px-5 max-md:mt-6 max-md:max-w-full">
     <img
       loading="lazy"
       src={icon}
@@ -71,13 +71,13 @@ const Features: React.FC = () => {
             <h2 className="text-5xl font-bold bg-clip-text bg-[linear-gradient(234deg,#AAD9D1_0%,#017373_125.68%)] leading-[57.6px] text-stone-200 max-md:max-w-full max-md:text-4xl">
               Откройте силу ИТ-аутсорсинга
             </h2>
-            <p className="self-center mt-6 text-base leading-6 text-zinc-400 w-[410px]">
+            <p className="self-center mt-6 text-base leading-6 text-zinc-400 w-[410px] max-md:w-full">
               Наши услуги включают инновационные функции, предназначенные для революционизации вашей работы, сотрудничества и организации.
             </p>
           </div>
         </div>
-        <div className="mt-24 max-md:mt-10 max-md:max-w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-24 max-md:mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {features.map((feature, index) => (
               <Feature key={index} {...feature} />
             ))}
